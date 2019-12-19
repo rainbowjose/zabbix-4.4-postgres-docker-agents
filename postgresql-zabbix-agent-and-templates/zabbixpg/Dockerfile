@@ -9,6 +9,7 @@ RUN apt-get -y install curl
 RUN curl https://repo.zabbix.com/zabbix/4.4/ubuntu/pool/main/z/zabbix/zabbix-agent_4.4.3-1+bionic_amd64.deb -o zabbix-agent.deb
 RUN apt-get -y install ./zabbix-agent.deb
 RUN apt-get install -y postgresql-client
+RUN apt-get install -y iputils-ping
 
 RUN mkdir /var/lib/zabbix
 ADD postgresql /var/lib/zabbix
