@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  zabbixpg:
+    build:
+      dockerfile: Dockerfile
+      context: ./zabbixpg
+    env_file: .env
+    ports:
+      - 10050:10050
